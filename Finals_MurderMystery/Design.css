@@ -51,28 +51,38 @@ p{
 	border: solid 5px #3C3C44;
 	height: 20px;
 }
-#StartGame{
+#StartGame, #Act1{
 	display: none;
 }
 #Chapter{
 	padding: 1px;
 	background-color: #22211f;
 	border: solid 5px #3C3C44;
+	width: 750px;
+	margin-left: auto;
+  	margin-right: auto;
 }
 #Image{
 	height: 500px;
+	width: 750px;
 	background-color: #22211f;
 	border: solid 5px #3C3C44;
+	margin-left: auto;
+  	margin-right: auto;
 }
 #Story{
-	padding: 10px;
 	background-color: #22211f;
 	border: solid 5px #3C3C44;
+	width: 750px;
+	margin-left: auto;
+  	margin-right: auto;
 }
 #Game{
-	padding: 20px;
 	background-color: #22211f;
 	border: solid 5px #3C3C44;
+	width: 750px;
+	margin-left: auto;
+  	margin-right: auto;
 }
 .buttonDesign{
 	text-align: center;
@@ -81,4 +91,15 @@ p{
 	color: #22211f;
 	border: solid 3px #3C3C44;
 	font-family: "Courier New", monospace;
+	width: 400px;
+	margin-left: auto;
+  	margin-right: auto;
+}
+#scene1, #scene2{
+	width: 700px;
+  	height: 400px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	border: solid 3px #3C3C44;
 }

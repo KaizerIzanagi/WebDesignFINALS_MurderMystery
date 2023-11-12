@@ -14,11 +14,35 @@
 
 	<!--Script-->
 	<script>
+	var x = 1;
 		$(document).ready(function(){
 			$("#StartGameButton").click(function(){
-				$("#StartGame").slideToggle(500);
-				$("#DeadBody").slideToggle(500);
-				$("#MainMenu").slideToggle(500);
+				$("#StartGame").slideToggle("slow");
+				$("#DeadBody").slideToggle("slow");
+				$("#MainMenu").slideToggle("slow");
+			});
+			$("#Continue").click(function(){
+				switch(x){
+				case 1:
+					x = 2;
+					$("#StoryText").hide(1000);
+					$("#Story").slideToggle(1000);
+					$("h3#StoryText").text("Looks like the typical murder scene. Person who died seems to have had been killed by someone they knew. The victim apparently died during a Friday, on the 13th of October... Did a background check. Barely knew anyone in the area.");
+					$("#Story").slideToggle(1000);
+					$("#StoryText").show(1000);
+					$("h2#Prologue").hide(1000);
+					$("#scene1").slideToggle("slow");
+					$("#scene2").slideToggle("slow");
+					$("p#Prologue").slideToggle(1000);
+					$("h2#Act1").slideToggle(1000);
+					$("p#Act1").slideToggle(1000);
+					$("#Subtext").text("X=2");
+					break;
+				case 2:
+					x = 3;
+					$("#Subtext").text("X=3");
+					break;
+				}
 			});
 		});
 	</script>
@@ -32,7 +56,7 @@
 		<hr>
 		<h1>The Murder Case of Duff McWhisky</h1>
 		<img id="DeadBody" src="Images/DeadBody.png">
-		<h3>A Short Murder Mystery Game</h3>
+		<h3 id="Subtext">A Short Murder Mystery Game</h3>
 		<hr>
 	</div>
 
@@ -47,26 +71,34 @@
 		<br>
 		<!--Chapter-->
 		<div id="Chapter">
-			<h2>H2 sample. Beginning</h2>
+			<h2 id="Prologue">Prologue</h2>
+			<h2 id="Act1">Act 1</h2>
 		</div>
 		<br>
 
 		<!--Image/Scene-->
 		<div id="Image">
-			<p>Describing the scene</p>
+			<br>
+			<img src="Images/Scene1.png" id="scene1">
+			<p id="Prologue">Dark, Stormy Night.</p>
+			<img src="Images/Scene2.png" id="scene2" style="display: none;">
+			<p id="Act1">Stormy. Dead Body Outline. Dreadful...</p>
 		</div>
 		<br>
 
 		<!--The Story-->
 		<div id="Story">
-			<h3>H3 sample. It was a dark and stormy night. <br> You know, the usual night in this bleak city. <br> Got a call from the chief. A new case. <br> Time to investigate a murder.</h3>
-			<h4>H4 sample.</h4>
+			<h3 id="StoryText">It was a dark and stormy night. <br> You know, the usual night in this bleak city. <br> Got a call from the chief. A new case.</h3>
 		</div>
+
+		<br>
 
 		<!--The buttons and possibly the inner thought of the MC to us players-->
 		<div id="Game">
-			<p>Paragraph. Continue story? This is MC talking to the audience/player.</p>
-			<div class="buttonDesign" id="Continue1">Continue</div>
+			<p id="Prologue"><b>Time to investigate a murder.<b></p>
+			<p id="Act1"><b>That narrows it down to 3 people...<b></b>
+			<div class="buttonDesign" id="Continue">Continue</div>
+			<br>
 		</div>
 	</div>
 
