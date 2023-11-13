@@ -25,7 +25,7 @@ h4{
 	color: ghostwhite;
 	text-align: center;
 }
-p{
+p, #Credit{
 	font-family: "Courier New", monospace;
 	color: ghostwhite;
 	text-align: center;
@@ -54,6 +54,7 @@ p{
 #StartGame, #Act1{
 	display: none;
 }
+
 #Chapter{
 	padding: 1px;
 	background-color: #22211f;
@@ -76,6 +77,7 @@ p{
 	width: 750px;
 	margin-left: auto;
   	margin-right: auto;
+  	padding: 5px;
 }
 #Game{
 	background-color: #22211f;
@@ -83,6 +85,9 @@ p{
 	width: 750px;
 	margin-left: auto;
   	margin-right: auto;
+}
+#Thoughts{
+	padding: 5px;
 }
 .buttonDesign{
 	text-align: center;
@@ -95,11 +100,25 @@ p{
 	margin-left: auto;
   	margin-right: auto;
 }
-#scene1, #scene2{
+#scene1, #scene2, #GoodEnding, #BadEnding{
 	width: 700px;
   	height: 400px;
   	display: block;
   	margin-left: auto;
   	margin-right: auto;
   	border: solid 3px #3C3C44;
+}
+#suspect1, #suspect2, #suspect3{
+	width: 500px;
+  	height: 650px;
+  	display: inline-block;
+  	margin-left: 35px;
+  	border: solid 3px #3C3C44;
+  	padding: 5px;
+}
+#Choice1, #Choice2, #Choice3{
+	width: 200px;
+	display: inline-block;
+  	margin-left: 35px;
+  	margin-bottom: 20px;
 }
